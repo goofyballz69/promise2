@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffdde1;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .promise {
+            background: #ff4081;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .promise:hover {
+            background: #e91e63;
+        }
+        .hidden {
+            display: none;
+            margin-top: 10px;
+            color: #444;
+        }
+        .music-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .music-button {
+            background: #ff4081;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .music-button:hover {
+            background: #e91e63;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="i-wanna-be-yours.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="music-buttons">
+        <button class="music-button" onclick="document.getElementById('bg-music').play()">
+            <i class="fas fa-play"></i> Play Music
+        </button>
+        <button class="music-button" onclick="document.getElementById('bg-music').pause()">
+            <i class="fas fa-pause"></i> Pause Music
+        </button>
+    </div>
+    
+    <div class="container">
+        <h1>Happy Promise Day Babygirl!! 💖</h1>
+        <p>Today, I make some heartfelt promises to you, my love.</p>
+        
+        <div class="promise" onclick="showPromise(1)">I promise to always love you</div>
+        <p id="promise1" class="hidden">No matter the distance, my love for you will never fade. 💕</p>
+        
+        <div class="promise" onclick="showPromise(2)">I promise to stand by you</div>
+        <p id="promise2" class="hidden">Through every high and low, I will always be your biggest supporter. 🌟</p>
+        
+        <div class="promise" onclick="showPromise(3)">I promise to make you smile</div>
+        <p id="promise3" class="hidden">Your happiness means the world to me, and I will always do my best to keep that smile on your face. 😊</p>
+    </div>
+    
+    <script>
+        function showPromise(num) {
+            document.getElementById('promise' + num).classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
